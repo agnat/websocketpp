@@ -1148,6 +1148,8 @@ public:
      * @param ec A status code, zero on success, non-zero otherwise
      */
     void send_http_response(lib::error_code & ec);
+
+    session::http_state::value get_http_state() const { return m_http_state; }
     
     /// Send deferred HTTP Response
     void send_http_response();
